@@ -1,0 +1,8 @@
+Customer: Maya Seny
+Email: maya.seny@example.com
+Phone: +91 98765 43210
+Complaint: Yes
+Category: Billing
+Issue: I was charged twice for my annual subscription on 06 September.
+Resolution: Duplicate charge was identified and refund initiated.
+Supporting document: Bank statement attached.

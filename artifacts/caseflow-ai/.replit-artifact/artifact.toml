@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "CaseFlow AI"
+description = "A GenAI-powered customer complaint processing workspace that ingests documents, extracts structured case data, drafts customer responses, and creates internal management summaries in batch."
+version = "1.0.0"
+id = "artifacts/caseflow-ai"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24961
+
+[services.development]
+run = "pnpm --filter @workspace/caseflow-ai run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/caseflow-ai", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/caseflow-ai/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24961"
+BASE_PATH = "/"

@@ -1,0 +1,1 @@
+- [Document parser runtime](document-parser-runtime.md) — lazy-load PDF parsing libraries so Node startup does not require browser canvas globals.
